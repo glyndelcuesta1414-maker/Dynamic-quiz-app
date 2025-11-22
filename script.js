@@ -25,9 +25,12 @@ function loadQuestion() {
     $(".option").removeClass("selected");
     $(this).addClass("selected");
     $(".option").addClass("disabled");
+
     let userAnswer = $(this).data("index");
     if (userAnswer == questions[index].correct) score++;
+
     $("#nextBtn").show();
+
     if (index === questions.length - 1) {
       $("#nextBtn").hide();
       $("#finishBtn").show();
@@ -42,14 +45,16 @@ $("#nextBtn").click(function () {
 });
 
 $("#finishBtn").click(function () {
-  $(".score").show(); 
+  $(".score").show();
   $("#score").text(score);
+
   let resultHTML = `
     <h2>Quiz Finished!</h2>
     <p>Your Final Score: <strong>${score}/10</strong></p>
     <h3>All Questions & Correct Answers:</h3>
     <ul style="text-align:left; margin-top:10px; font-size:18px;">
   `;
+
   questions.forEach((q, i) => {
     resultHTML += `
       <li>
@@ -58,6 +63,7 @@ $("#finishBtn").click(function () {
       </li><br>
     `;
   });
+
   resultHTML += "</ul>";
   $("#question-box").html(resultHTML);
   $(this).hide();
