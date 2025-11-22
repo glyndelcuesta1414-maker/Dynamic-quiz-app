@@ -1,8 +1,9 @@
+
 let questions = [
   { q: "Who created JavaScript?", a: ["Brendan Eich", "Elon Musk", "Bill Gates", "Mark Zuckerberg"], correct: 0 },
   { q: "What does jQuery help with?", a: ["Styling", "Server Management", "DOM Manipulation", "Video Editing"], correct: 2 },
   { q: "Which symbol is used for jQuery?", a: ["$", "#", "@", "&"], correct: 0 },
-  { q: "Which HTML tag is for JavaScript?", a: ["<script>;", "&lt;javascript&gt", "&lt;script&gt", "&lt;code&gt"], correct: 2 },
+  { q: "Which HTML tag is for JavaScript?", a: ["&lt;js&gt;", "&lt;javascript&gt;", "&lt;script&gt;", "&lt;code&gt;"], correct: 2 },
   { q: "Which jQuery method hides elements?", a: ["vanish()", "hide()", "none()", "remove()"], correct: 1 },
   { q: "Which method adds click event?", a: ["click()", "onClick()", "press()", "tap()"], correct: 0 },
   { q: "What does DOM stand for?", a: ["Document Object Model", "Data Object Module", "Design Order Map", "Digital Output Mode"], correct: 0 },
@@ -71,4 +72,4 @@ $("#finishBtn").click(function () {
 });
 
 loadQuestion();
-  
+
